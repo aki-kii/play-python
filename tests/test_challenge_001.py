@@ -15,7 +15,7 @@ from challenge_001 import multiple_number, to_fahrenheit
     ],
     ids=["0", "正の数", "負の数", "少数", "複数の値", "値を渡さない"],
 )
-def test_to_fahrenheit(cercius_list, expected_data):
+def test_to_fahrenheit(cercius_list: list[float], expected_data: list[float]) -> None:
     farhrenheit_list = to_fahrenheit(cercius_list)
     assert farhrenheit_list == expected_data
 
@@ -29,6 +29,6 @@ def test_to_fahrenheit(cercius_list, expected_data):
     ],
     ids=["最小値", "最大値", "サンプル値"],
 )
-def test_multiple_number(input_number, expected_data):
+def test_multiple_number(input_number: int, expected_data: list[int]) -> None:
     multiple_list = multiple_number(input_number)
     assert multiple_list == expected_data
