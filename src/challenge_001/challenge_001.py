@@ -1,5 +1,6 @@
 from challenge_001.celsius_model import CelsiusModel
 from challenge_001.fahrenheit_model import FahrenheitModel
+from challenge_001.natural_number_model import NaturalNumberModel
 
 
 def celsius_to_fahrenheit(celsius_list: list[CelsiusModel]) -> list[FahrenheitModel]:
@@ -25,7 +26,6 @@ def multiple_number(input_number: int) -> list[int]:
     Returns:
         list[int]: 入力された数の倍数が全て含まれるリスト
     """
-    # 100以下の倍数の個数
-    multiple_size = 100 // input_number
+    under_hundred_number = NaturalNumberModel(number=input_number)
 
-    return [i * input_number for i in range(1, multiple_size + 1)]
+    return under_hundred_number.list_multiples()
