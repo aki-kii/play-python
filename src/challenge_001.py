@@ -7,7 +7,7 @@ def to_fahrenheit(celsius_list: list[float]) -> list[float]:
     Returns:
         list[float]: Fahrenheit温度のリスト
     """
-    pass
+    return [temperature * 1.8 + 32 for temperature in celsius_list]
 
 
 def multiple_number(input_number: int) -> list[int]:
@@ -19,4 +19,7 @@ def multiple_number(input_number: int) -> list[int]:
     Returns:
         list[int]: 入力された数の倍数が全て含まれるリスト
     """
-    pass
+    # 100以下の倍数の個数
+    multiple_size = 100 // input_number
+
+    return [i * input_number for i in range(1, multiple_size + 1)]
