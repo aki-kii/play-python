@@ -1,9 +1,10 @@
 import pytest
 
-from challenge_001 import CelsiusModel, FahrenheitModel, multiple_number, to_fahrenheit
+from challenge_001.celsius_model import CelsiusModel
+from challenge_001.challenge_001 import celsius_to_fahrenheit, multiple_number
+from challenge_001.fahrenheit_model import FahrenheitModel
 
 
-@pytest.mark.xfail(reason="型を変更したため(float-> CelsiusModel, FahrenheitModel)")
 @pytest.mark.parametrize(
     "cercius_list, expected_data",
     [
@@ -34,8 +35,10 @@ from challenge_001 import CelsiusModel, FahrenheitModel, multiple_number, to_fah
         "値を渡さない",
     ],
 )
-def test_to_fahrenheit(cercius_list: list[float], expected_data: list[float]) -> None:
-    farhrenheit_list = to_fahrenheit(cercius_list)
+def test_celsius_to_fahrenheit(
+    cercius_list: list[CelsiusModel], expected_data: list[FahrenheitModel]
+) -> None:
+    farhrenheit_list = celsius_to_fahrenheit(cercius_list)
     assert farhrenheit_list == expected_data
 
 

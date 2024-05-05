@@ -1,13 +1,19 @@
-def to_fahrenheit(celsius_list: list[float]) -> list[float]:
+from challenge_001.celsius_model import CelsiusModel
+from challenge_001.fahrenheit_model import FahrenheitModel
+
+
+def celsius_to_fahrenheit(celsius_list: list[CelsiusModel]) -> list[FahrenheitModel]:
     """Celsius温度のリストをFahrenheit温度のリストに変換する
 
     Args:
-        celsius_list (list[float]): Celsius温度のリスト
+        celsius_list (list[CelsiusModel]): Celsius温度のリスト
 
     Returns:
-        list[float]: Fahrenheit温度のリスト
+        list[FahrenheitModel]: Fahrenheit温度のリスト
     """
-    return [temperature * 1.8 + 32 for temperature in celsius_list]
+    return [
+        FahrenheitModel(temperature=celsius.to_fahrenheit()) for celsius in celsius_list
+    ]
 
 
 def multiple_number(input_number: int) -> list[int]:
