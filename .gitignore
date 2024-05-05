@@ -1,10 +1,14 @@
 .DS_Store
+*_cache
 
 # venv
-venv/
+venv
 
 # pytest
 __pycache__
 .pytest_cache
 .coverage
+
+# tox
+.tox
 *.egg-info
