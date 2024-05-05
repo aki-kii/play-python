@@ -6,3 +6,4 @@ testpaths = "tests"
 [tool.mypy]
 strict = true
 mypy_path = "src"
+ignore_missing_imports = true
