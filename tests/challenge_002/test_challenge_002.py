@@ -2,7 +2,7 @@ from typing import Any
 
 import pytest
 
-from challenge_002 import shout_backwards, squared_primes
+from challenge_002.challenge_002 import shout_backwards, squared_primes
 
 
 @pytest.mark.parametrize(
