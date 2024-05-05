@@ -3,18 +3,25 @@
 ## ディレクトリ構造
 
 ```bash
-% tree .
+tree --gitignore .
 .
 ├── README.md
 ├── pyproject.toml # Pythonプロジェクトの設定ファイル（pytest, mypy: 静的型付けリンター）
-├── tox.ini # toxの設定ファイル（tox: 継続的インテグレーション）
 ├── requirements.txt # pipでインストールできるPythonのパッケージ
 ├── src # 課題用ソースコードの一覧。関数を課題に沿った内容に修正して使ってください
-│   ├── challenge_001.py
-│   └── challenge_002.py
-└── tests # 課題用テストコードの一覧。足りてない観点があれば教えてください
-    ├── test_challenge_001.py
-    └── test_challenge_002.py
+│   ├── challenge_001
+│   │   ├── celsius_model.py
+│   │   ├── challenge_001.py
+│   │   ├── fahrenheit_model.py
+│   │   └── natural_number_model.py
+│   └── challenge_002
+│       └── challenge_002.py
+├── tests # 課題用テストコードの一覧。足りてない観点があれば教えてください
+│   ├── challenge_001
+│   │   └── test_challenge_001.py
+│   └── challenge_002
+│       └── test_challenge_002.py
+└── tox.ini # toxの設定ファイル（tox: 継続的インテグレーション）
 ```
 
 ## 環境構築の手順

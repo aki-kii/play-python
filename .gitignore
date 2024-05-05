@@ -4,7 +4,7 @@
 venv/
 
 # pytest
-__pycache__/
-.pytest_cache/
+__pycache__
+.pytest_cache
 .coverage
-*.egg-info/
+*.egg-info
