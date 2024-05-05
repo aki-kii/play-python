@@ -12,6 +12,7 @@ from challenge_001.fahrenheit_model import FahrenheitModel
         ([CelsiusModel(temperature=1.0)], [FahrenheitModel(temperature=33.8)]),
         ([CelsiusModel(temperature=-1.0)], [FahrenheitModel(temperature=30.2)]),
         ([CelsiusModel(temperature=0.1)], [FahrenheitModel(temperature=32.18)]),
+        ([CelsiusModel(temperature=-273.15)], [FahrenheitModel(temperature=-459.67)]),
         (
             [
                 CelsiusModel(temperature=1.0),
@@ -31,6 +32,7 @@ from challenge_001.fahrenheit_model import FahrenheitModel
         "正の数",
         "負の数",
         "少数",
+        "絶対零度",
         "複数の値",
         "値を渡さない",
     ],
